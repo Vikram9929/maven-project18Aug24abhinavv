@@ -34,7 +34,7 @@ pipeline{
         stage('deploy to tomcat server'){
             steps{
                  sshagent (credentials: ['deploytotomcat18']) {
-               sh 'ssh -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@172.31.33.240:/usr/share/tomcat webapps/'
+               sh 'ssh -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@172.31.33.240:/usr/share/tomcat/webapps/'
             }
         }
     }
