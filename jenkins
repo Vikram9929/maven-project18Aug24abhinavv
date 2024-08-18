@@ -1,0 +1,12 @@
+pipeline   
+{
+    agent any  
+    stages  
+   {
+      stage('scm checkout')  
+      { 
+        steps{ jenkinsgit branch: 'master', url: 'https://github.com/Vikram9929/maven-project18Aug24abhinavv.git''  }   
+      }
+
+
+    }
